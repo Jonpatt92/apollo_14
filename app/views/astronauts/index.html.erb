@@ -6,18 +6,18 @@
         <% mission.astronaut_id == astronaut.id %>
       <% end %>
       <% their_missions.sort %>
-      <% their_missions.each do |mission| %>
         <li><%= astronaut.name %>
           <ul>
             <li>Age: <%= astronaut.age %></li>
             <li>Job: <%= astronaut.job %></li>
           </ul>
-          <h3>Space Missions</h3>
+          <p>Space Missions:</p>
+        <% their_missions.each do |mission| %>
           <ul>
-            <li><%= mission.name %></li>
+            <li><%= mission.title %></li>
           </ul>
-        </li>
-      <% end %>
+        </li><br>
+        <% end %>
     <% end %>
   </ol>
 </section><hr><br>

@@ -11,7 +11,7 @@ describe 'When I visit /astronauts' do
     @neil = Astronaut.create(name: "Neil Armstrong", age: 30, job: "Commander")
     @buzz = Astronaut.create(name: "Buzz Aldrin", age: 40, job: "Pilot")
     @apollo_14 = @buzz.missions.create(title: "Apollo 14", time_in_space: 15)
-    @apollo_13 = @buzz.missions.create(title: "Apollo 13", time_in_space: 13)
+    @apollo_13 = @buzz.missions.create(title: "b Apollo 13", time_in_space: 13)
     @cassini = @neil.missions.create(title: "Cassini", time_in_space: 10)
     @juno = @neil.missions.create(title: "Juno", time_in_space: 16)
   end
