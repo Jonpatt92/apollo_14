@@ -44,6 +44,10 @@ describe 'When I visit /astronauts' do
     expect(page).to have_content("Apollo 13")
     expect(page).to have_content("Cassini")
     expect(page).to have_content("Juno")
+    expect(page).to have_content("Total time in space: 28")
+    expect(page).to have_content("Total time in space: 26")
+
+
 
   end
 end
