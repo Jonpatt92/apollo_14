@@ -39,7 +39,7 @@ describe 'When I visit /astronauts' do
 
   it 'On /astronauts I see the missions in alphabetical order for each astronaut' do
     visit '/astronauts'
-
+    save_and_open_page
     expect(page).to have_content("Apollo 14")
     expect(page).to have_content("Apollo 13")
     expect(page).to have_content("Cassini")

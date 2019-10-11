@@ -2,12 +2,22 @@
   <h2>Astronauts</h2>
   <ol>
     <% @astronauts.each do |astronaut| %>
-    <li><%= astronaut.name %>
-      <ul>
-        <li>Age: <%= astronaut.age %></li>
-        <li>Job: <%= astronaut.job %></li>
-      </ul>
-    </li>
+      <% their_missions = @missions.select do |mission| %>
+        <% mission.astronaut_id == astronaut.id %>
+      <% end %>
+      <% their_missions.sort %>
+      <% their_missions.each do |mission| %>
+        <li><%= astronaut.name %>
+          <ul>
+            <li>Age: <%= astronaut.age %></li>
+            <li>Job: <%= astronaut.job %></li>
+          </ul>
+          <h3>Space Missions</h3>
+          <ul>
+            <li><%= mission.name %></li>
+          </ul>
+        </li>
+      <% end %>
     <% end %>
   </ol>
 </section><hr><br>
