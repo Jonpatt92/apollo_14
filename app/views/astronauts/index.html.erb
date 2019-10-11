@@ -1,0 +1,13 @@
+<section class="astronauts">
+  <h2>Astronauts</h2>
+  <ol>
+    <% @astronauts.each do |astronaut| %>
+    <li><%= astronaut.name %>
+      <ul>
+        <li>Age: <%= astronaut.age %></li>
+        <li>Job: <%= astronaut.job %></li>
+      </ul>
+    </li>
+    <% end %>
+  </ol>
+</section>
