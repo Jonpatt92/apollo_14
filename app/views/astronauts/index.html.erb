@@ -10,6 +10,9 @@
           <ul>
             <li>Age: <%= astronaut.age %></li>
             <li>Job: <%= astronaut.job %></li>
+            <% their_missions.sum do |mission| %>
+            <li>Time in space: <%= mission.time_in_space %></li>
+            <% end %>
           </ul>
           <p>Space Missions:</p>
         <% their_missions.each do |mission| %>
